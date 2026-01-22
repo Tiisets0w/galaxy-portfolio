@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  background: #02030a;
+  color: white;
+  font-family: system-ui, sans-serif;
+}
+
+
+body {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.skill-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow:
+    0 0 30px rgba(255, 180, 80, 0.35),
+    0 0 80px rgba(255, 180, 80, 0.15);
+}
+
+.skill-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-tile:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 180, 80, 0.25);
+}
+
+.skills-section-stars {
+  background: #02030a;
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 3px 3px; /* size of stars */
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navbar.css or in index.css */
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
+@media (max-width: 768px) {
+  .hamburger-icon {
+    display: block; /* show hamburger on mobile */
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 60px;
+    right: -100%; /* hide by default */
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    width: 200px;
+    padding: 20px;
+    gap: 20px;
+    transition: right 0.3s ease;
+    height: calc(100vh - 60px);
+  }
+
+  .nav-links.open {
+    right: 0; /* slide in */
+  }
+}
+
+
+
+
+
