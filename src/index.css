@@ -85,7 +85,7 @@ html {
 
 @media (max-width: 500px) {
   .space-canvas {
-    height: 80vh; /* smaller on mobile */
+    height: 50vh; /* smaller on mobile */
   }
 }
 
