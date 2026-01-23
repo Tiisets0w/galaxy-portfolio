@@ -93,10 +93,11 @@ export default function SpaceCanvas() {
   return (
     <div
       style={{
-        position: 'absolute',
-        inset: 0,
+        position: 'relative', // let it flow normally
+        width: '100%',
+        height: '100vh', // or 80vh if you want it smaller
         zIndex: 1,
-        pointerEvents: 'none', //  critical
+        pointerEvents: 'none', // still non-interactive
       }}
     >
       <Canvas camera={{ position: [0, 0, 12], fov: 75 }}>
