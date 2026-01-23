@@ -93,15 +93,24 @@ export default function SpaceCanvas() {
   return (
     <div
       style={{
-        position: 'relative',  // so it flows naturally
+        position: 'relative',
         width: '100%',
-        height: '150vh',       // make it bigger so it moves down a lot
-        marginTop: '50px',     // optional spacing from previous section
-        zIndex: 0,             // behind AboutOverlay
-        pointerEvents: 'none', // keep canvas non-interactive
+        height: '150vh',       // default for desktop
+        marginTop: '50px',
+        zIndex: 0,
+        pointerEvents: 'none',
+
+        /* Responsive sizing for smaller screens */
+        maxHeight: '1000px',   // optional max limit
       }}
     >
-      <Canvas camera={{ position: [0, 0, 12], fov: 75 }}>
+      <Canvas
+        camera={{ position: [0, 0, 12], fov: 75 }}
+        style={{
+          width: '100%',
+          height: '100%',
+        }}
+      >
         <SpaceScene />
       </Canvas>
     </div>
